@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory - Lab 7</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>User Directory</h1>
+            <p>Powered by JSONPlaceholder API</p>
+        </header>
+
+        <main>
+            <!-- Search Section -->
+            <section class="search-section">
+                <input type="text" id="search-input" placeholder="Search users...">
+                <button id="search-btn">Search</button>
+                <button id="load-users-btn">Load All Users</button>
+            </section>
+
+            <!-- Error Display -->
+            <div id="error-container" class="error-container hidden">
+                <span id="error-message"></span>
+                <button id="error-close" class="close-btn">&times;</button>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <span>Loading...</span>
+            </div>
+
+            <!-- Users Grid -->
+            <section id="users-container" class="users-grid">
+                <!-- User cards will be dynamically inserted here -->
+            </section>
+
+            <!-- Create Post Section -->
+            <section class="create-post-section">
+                <h2>Create New Post</h2>
+                <form id="post-form">
+                    <div class="form-group">
+                        <label for="post-user-id">User ID:</label>
+                        <input type="number" id="post-user-id" min="1" max="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-title">Title:</label>
+                        <input type="text" id="post-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-body">Body:</label>
+                        <textarea id="post-body" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" id="submit-post-btn">Create Post</button>
+                </form>
+                <div id="post-result" class="post-result hidden"></div>
+            </section>
+
+            <!-- User Posts Section -->
+            <section id="posts-section" class="posts-section hidden">
+                <h2>Posts by <span id="posts-user-name"></span></h2>
+                <button id="close-posts-btn" class="close-btn">&times;</button>
+                <div id="posts-container" class="posts-container">
+                    <!-- Posts will be dynamically inserted here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>CSC4035 - Lab 7: Fetch API</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

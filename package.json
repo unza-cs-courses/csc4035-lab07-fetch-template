@@ -1,0 +1,19 @@
+{
+  "name": "csc4035-lab07-fetch",
+  "version": "1.0.0",
+  "description": "Lab 7: Fetch API - CSC4035 Web Programming",
+  "main": "app.js",
+  "scripts": {
+    "test": "node tests/visible/tests.js"
+  },
+  "keywords": [
+    "javascript",
+    "fetch",
+    "api",
+    "csc4035"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "^27.4.0"
+  }
+}
