@@ -204,7 +204,7 @@ Additional tests run after the deadline covering:
 2. Ensure `npm test` passes
 3. Test manually in browser
 4. Commit and push your changes
-5. Check the Actions tab for test results
+5. Verify all tests pass locally before pushing
 
 ```bash
 git add .
